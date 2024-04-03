@@ -2,43 +2,42 @@ using Algos.Sort;
 
 namespace Algos.Tests;
 
-public class MergeSortTests
+public class MergeSort_2_2_15Tests
 {
     SharedSortTestCase _sharedTestCase;
 
-    public MergeSortTests()
+    public MergeSort_2_2_15Tests()
     {
-        var merger = new Merger<int>();
-        var sorter = new MergeSorter<int>(merger);
+        var sorter = new BUQueueMergeSorter_2_2_15<int>();
         _sharedTestCase = new SharedSortTestCase(sorter);
     }
 
     [Fact]
-    public void MergeSort_Work()
+    public void BUQueueMergeSorter_Work()
     {
         _sharedTestCase.Work();
     }
 
     [Fact]
-    public void MergeSort_Work_With_No_Element()
+    public void BUQueueMergeSorter_Work_With_No_Element()
     {
         _sharedTestCase.WorkWithEmpty();
     }
 
     [Fact]
-    public void MergeSort_Work_With_Sorted()
+    public void BUQueueMergeSorter_Work_With_Sorted()
     {
         _sharedTestCase.WorkWithSorted();
     }
 
     [Fact]
-    public void MergeSort_Work_With_Reversed()
+    public void BUQueueMergeSorter_Work_With_Reversed()
     {
         _sharedTestCase.WorkWithReserved();
     }
 
     [Fact]
-    public void MergeSort_Work_With_One_Element()
+    public void BUQueueMergeSorter_Work_With_One_Element()
     {
         _sharedTestCase.WorkWithOneElement();
     }

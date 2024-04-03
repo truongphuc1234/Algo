@@ -2,14 +2,13 @@ using Algos.Sort;
 
 namespace Algos.Tests;
 
-public class MergeSortTests
+public class QuickSortTests
 {
     SharedSortTestCase _sharedTestCase;
 
-    public MergeSortTests()
+    public QuickSortTests()
     {
-        var merger = new Merger<int>();
-        var sorter = new MergeSorter<int>(merger);
+        var sorter = new QuickSorter<int>();
         _sharedTestCase = new SharedSortTestCase(sorter);
     }
 
@@ -43,4 +42,3 @@ public class MergeSortTests
         _sharedTestCase.WorkWithOneElement();
     }
 }
-
