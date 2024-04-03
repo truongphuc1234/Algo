@@ -2,13 +2,13 @@ using Algos.Sort;
 
 namespace Algos.Tests;
 
-public class QuickSortTests
+public class ThreeWayQuickSorterTests
 {
     SharedSortTestCase _sharedTestCase;
 
-    public QuickSortTests()
+    public ThreeWayQuickSorterTests()
     {
-        var sorter = new QuickSorter<int>();
+        var sorter = new ThreeWayQuickSorter<int>();
         _sharedTestCase = new SharedSortTestCase(sorter);
     }
 
@@ -42,3 +42,4 @@ public class QuickSortTests
         _sharedTestCase.WorkWithOneElement();
     }
 }
+

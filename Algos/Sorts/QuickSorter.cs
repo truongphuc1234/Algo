@@ -23,27 +23,19 @@ public class QuickSorter<T> : ISorter<T> where T : IComparable
 
     private int Partition(T[] arr, int low, int high)
     {
-        int i = low, j = high;
+        int i = low + 1, j = high;
         //get low as pivot
         var pivot = arr[low];
         while (true)
         {
-            while (arr[i].Less(pivot))
+            while (i < high && arr[i].Less(pivot))
             {
                 i++;
-                if (i == high)
-                {
-                    break;
-                }
             }
 
-            while (pivot.Less(arr[j]))
+            while (j > low && pivot.Less(arr[j]))
             {
                 j--;
-                if (j == low)
-                {
-                    break;
-                }
             }
 
             if (i >= j)

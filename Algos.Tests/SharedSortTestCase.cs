@@ -17,6 +17,7 @@ public class SharedSortTestCase
 		var clone = new int[10];
 		Array.Copy(arr, clone, arr.Length);
 		_sorter.Sort(arr);
+        Assert.Equal(arr, new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 });
 		Assert.True(Helper.IsSorted(arr));
 		Assert.True(Helper.HasSameElements(arr, clone));
 	}
